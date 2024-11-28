@@ -1,0 +1,117 @@
+/* General Styles */
+.gbp-book-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Book Item Styles */
+.gbp-book-list .book-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gbp-book-list .book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gbp-book-list .book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.gbp-book-list .book-item h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.gbp-book-list .book-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.gbp-book-list .book-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #0073e6;
+    transition: color 0.3s ease;
+}
+
+.gbp-book-list .book-item a:hover {
+    color: #005bb5;
+}
+
+/* Grid Layout */
+.gbp-book-list.grid .book-item {
+    width: calc(33.333% - 20px);
+}
+
+@media (max-width: 1200px) {
+    .gbp-book-list.grid .book-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .gbp-book-list.grid .book-item {
+        width: 100%;
+    }
+}
+
+/* List Layout */
+.gbp-book-list.list .book-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gbp-book-list.list .book-item img {
+    width: 80px;
+    height: 120px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.gbp-book-list.list .book-item h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+}
+
+.gbp-book-list.list .book-item p {
+    font-size: 0.95rem;
+}
+
+.gbp-book-list.list .book-item a {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gbp-book-list.list .book-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gbp-book-list.list .book-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
